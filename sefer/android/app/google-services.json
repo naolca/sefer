@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "927601355564",
+    "project_id": "sefer1014",
+    "storage_bucket": "sefer1014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927601355564:android:af41af22875def35cb5a89",
+        "android_client_info": {
+          "package_name": "com.firaol.sefer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927601355564-i38quh8rdn8cfus6tu7tmcelo47t8t5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firaol.sefer",
+            "certificate_hash": "ea4cd5b557d9ea549244ead76263ee3d47645445"
+          }
+        },
+        {
+          "client_id": "927601355564-k4u584cbpevloos4mu34f2smup1r3cp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7dvAVlRxzeIuO_-crbPkntkxFjAvYzVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927601355564-k4u584cbpevloos4mu34f2smup1r3cp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
