@@ -31,8 +31,6 @@ void main() {
         .thenAnswer((_) async => Right(authResult));
 
     final result = await usecase.loginUser(credentials);
-
-    print(result);
     expect(result, Right(authResult));
     verify(mockAuthenticationRepository.loginUser(credentials));
   });
