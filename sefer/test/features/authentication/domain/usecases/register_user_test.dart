@@ -7,7 +7,7 @@ import 'package:sefer/features/authentication/domain/entities/auth_result.dart';
 import 'package:sefer/features/authentication/domain/entities/user_credentials.dart';
 import 'package:sefer/features/authentication/domain/repositories/authentication_repository.dart';
 import 'package:sefer/features/authentication/domain/usecases/register_user.dart';
-import 'register_user_test.mocks.dart';
+import 'login_user_test.mocks.dart';
 
 @GenerateMocks([AuthenticationRepository])
 void main() {
