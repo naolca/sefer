@@ -1,19 +1,16 @@
-import 'dart:math';
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:sefer/core/errors/exceptions.dart';
 import 'package:sefer/core/errors/failures.dart';
-import 'package:sefer/core/platform/network_info.dart';
+import 'package:sefer/core/network/network_info.dart';
 import 'package:sefer/features/authentication/data/datasources/authentication_local_data_source.dart';
 import 'package:sefer/features/authentication/data/datasources/authentication_remote_data_source.dart';
 import 'package:sefer/features/authentication/data/models/auth_result_model.dart';
 import 'package:sefer/features/authentication/data/repository/authentication_repository_impl.dart';
 import 'package:sefer/features/authentication/domain/entities/auth_result.dart';
 import 'package:sefer/features/authentication/domain/entities/user_credentials.dart';
-import 'package:sefer/features/authentication/domain/entities/user_entity.dart';
 
 import 'authentication_repository_impl_test.mocks.dart';
 
@@ -68,7 +65,7 @@ void main() {
       final credentials =
           UserCredentials(identifier: identifier, password: password);
       final authResult = AuthResult(isSuccess: true);
-
+      final authResultModel = AuthResultModel(isSuccess: true);
       test(
           "should return the user entity when the login is initiated and is succesful",
           () async {
@@ -86,7 +83,7 @@ void main() {
 
         await repository.loginUser(credentials);
         verify(mockAuthenticatonRemoteDataSource.loginUser(credentials));
-        verify(mockAuthenticationLocalDataSource.cacheUser());
+        verify(mockAuthenticationLocalDataSource.cacheUser(authResultModel));
       });
 
       test(
