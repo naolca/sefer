@@ -1,3 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,6 +13,7 @@ import '../../domain/entities/user_credentials.dart';
 
 class LoginPage extends StatelessWidget {
   final Key key;
+  DatabaseReference reference = FirebaseDatabase.instance.ref().child('posts');
 
   LoginPage({required this.key}) : super(key: key);
   final TextEditingController usernameController = TextEditingController();
@@ -141,8 +145,13 @@ class LoginPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     // Handle login button press
+                    await reference.push().set({
+                      'title': 'My Awesome Photo',
+                      'likes': 0,
+                      'comments': 0,
+                    }).then((_) => print("data sent successfully"));
                     final username = usernameController.text;
                     final password = passwordController.text;
                     loginDispatcher(context, username, password); // P

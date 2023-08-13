@@ -35,7 +35,6 @@ class AuthenticationRemoteDataSourceImpl
         email: credentials.identifier,
         password: credentials.password,
       );
-      print("RESULTTTTTTTTTTTTTTTTTT:$authResult");
 
       return AuthResultModel(isSuccess: true);
     } catch (e) {

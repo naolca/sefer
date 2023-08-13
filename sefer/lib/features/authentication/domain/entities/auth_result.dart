@@ -1,8 +1,6 @@
-import 'package:equatable/equatable.dart';
+import './user_entity.dart';
 
-import 'user_entity.dart';
-
-class AuthResult extends Equatable {
+class AuthResult {
   final bool isSuccess;
   final String? errorMessage;
   final User? user;
@@ -12,7 +10,4 @@ class AuthResult extends Equatable {
     this.errorMessage,
     this.user,
   });
-
-  @override
-  List<Object?> get props => [isSuccess];
 }
