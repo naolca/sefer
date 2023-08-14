@@ -6,7 +6,7 @@
 import 'dart:async' as _i4;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:sefer/core/platform/network_info.dart' as _i7;
+import 'package:sefer/core/network/network_info.dart' as _i7;
 import 'package:sefer/features/authentication/data/datasources/authentication_local_data_source.dart'
     as _i6;
 import 'package:sefer/features/authentication/data/datasources/authentication_remote_data_source.dart'
@@ -116,10 +116,11 @@ class MockAuthenticationLocalDataSource extends _i1.Mock
         )),
       ) as _i4.Future<_i2.AuthResultModel>);
   @override
-  _i4.Future<void> cacheUser() => (super.noSuchMethod(
+  _i4.Future<void> cacheUser(_i2.AuthResultModel? authResultModel) =>
+      (super.noSuchMethod(
         Invocation.method(
           #cacheUser,
-          [],
+          [authResultModel],
         ),
         returnValue: _i4.Future<void>.value(),
         returnValueForMissingStub: _i4.Future<void>.value(),

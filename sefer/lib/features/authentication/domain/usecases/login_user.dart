@@ -13,6 +13,8 @@ class LoginUser {
 
   Future<Either<Failure, AuthResult>> loginUser(
       UserCredentials userCredential) async {
-    return await authenticationRepository.loginUser(userCredential);
+    final result = await authenticationRepository.loginUser(userCredential);
+
+    return result;
   }
 }

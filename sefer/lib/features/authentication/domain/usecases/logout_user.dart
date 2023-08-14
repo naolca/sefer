@@ -4,4 +4,8 @@ class LogoutUser {
   final AuthenticationRepository authenticationRepository;
 
   LogoutUser(this.authenticationRepository);
+
+  Future<void> logout() {
+    return authenticationRepository.logoutUser();
+  }
 }
