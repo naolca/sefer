@@ -11,17 +11,16 @@ class UserProfile extends Equatable {
   final int postsCount;
   final DateTime createdAt;
 
-  UserProfile({
-    required this.userId,
-    required this.username,
-    required this.email,
-    required this.profilePictureUrl,
-    required this.bio,
-    required this.followersCount,
-    required this.followingCount,
-    required this.postsCount,
-    required this.createdAt,
-  });
+  UserProfile(
+      {required this.userId,
+      required this.username,
+      required this.email,
+      required this.profilePictureUrl,
+      required this.bio,
+      required this.followersCount,
+      required this.followingCount,
+      required this.postsCount,
+      required this.createdAt});
 
   @override
   List<Object?> get props => [userId];
