@@ -147,11 +147,11 @@ class LoginPage extends StatelessWidget {
                   ),
                   onPressed: () async {
                     // Handle login button press
-                    await reference.push().set({
-                      'title': 'My Awesome Photo',
-                      'likes': 0,
-                      'comments': 0,
-                    }).then((_) => print("data sent successfully"));
+                    // await reference.set({
+                    //   'title': 'My Awesome Photo',
+                    //   'likes': 0,
+                    //   'comments': 0,
+                    // }).asStream();
                     final username = usernameController.text;
                     final password = passwordController.text;
                     loginDispatcher(context, username, password); // P
